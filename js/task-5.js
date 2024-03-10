@@ -8,8 +8,9 @@ const div = document.querySelector(".widget");
 const textColorSpan = document.querySelector(".color");
 const setColorBtn   = document.querySelector(".change-color");
 const setColor = () => {
-  textColorSpan.textContent  = getRandomHexColor();
-  document.body.style.background = textColorSpan; 
+  const color = getRandomHexColor();
+  document.body.style.backgroundColor = color;
+  textColorSpan.textContent  = color;
 }
 
 setColorBtn.addEventListener("click", setColor);
