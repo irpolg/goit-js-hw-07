@@ -4,6 +4,7 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
+const div = document.querySelector(".widget");
 const textColorSpan = document.querySelector(".color");
 const setColorBtn   = document.querySelector(".change-color");
 const setColor = () => {
@@ -12,7 +13,23 @@ const setColor = () => {
 }
 
 setColorBtn.addEventListener("click", setColor);
+const btn = document.querySelector(".change-color");
+btn.style.background = "#4E75FF";
+btn.style.fontWeight = "500";
+btn.style.fontSize = "16px";
+btn.style.color = "#FFFFFF";
+btn.style.padding = "8px 16px";
+btn.style.width = "148px";
+btn.style.height = "40px";
+btn.style.borderRadius = "16px";
+div.style.display = "flex";
+div.style.flexWrap = "wrap";
+div.style.gap = "16px";
+div.style.width = "169px";
+div.style.height = "80px";
 
+
+//.style.padding = "156px"; 
 
 // Завдання 5 (див задача 4 submit - вебінар 08.03.2024)
 // Напиши скрипт, який змінює колір фону елемента <body> 

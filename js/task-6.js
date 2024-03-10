@@ -20,14 +20,13 @@ function handleInput(event) {
 }
 
 createBtn.addEventListener("click", () => {
-    if (Number(inputEl.value) < 0 || Number(inputEl.value) > 100) {
-      alert('Введи число від 1 до 100');
+    if (Number(inputEl.value.trim()) < 0 || Number(inputEl.value.trim()) > 100) {
+      //alert('Введи число від 1 до 100');  //trim
       console.log("error");
       //return;
     } else {
     console.log(inputEl.value);
-    //createBoxes(inputEl.value.trim());
-    createBoxes(inputEl.value);
+    createBoxes(inputEl.value.trim());  //trim
     }
     inputEl.value = '';
 }
@@ -41,6 +40,7 @@ function destroyBoxes() {
 }
 
 function createBoxes() {
+  boxesElDiv.innerHTML = ''; //забирає попередні квадрати після повторного кліку по кнопці Create
   let widthEl  = 30;
   let heightEl = 30;
   const divArr = [];
