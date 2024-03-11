@@ -13,20 +13,19 @@ const destroyBtn = document.querySelector("button[data-destroy]");
 const boxesElDiv = document.querySelector("#boxes"); // id
 
 inputEl.addEventListener("input", handleInput);
-let inputValue = 0;
 function handleInput(event) {
+  let inputValue = 0;
   inputValue = event.currentTarget.value;
   console.log(inputValue);
 }
 
 createBtn.addEventListener("click", () => {
-    if (Number(inputEl.value.trim()) < 0 || Number(inputEl.value.trim()) > 100) {
-      //alert('Введи число від 1 до 100');  //trim
-      console.log("error");
-      //return;
+    if (Number(inputEl.value) < 0 || Number(inputEl.value) > 100) {
+      inputEl.value = '';
+      return (boxesElDiv.innerHTML = '');
     } else {
     console.log(inputEl.value);
-    createBoxes(inputEl.value.trim());  //trim
+    createBoxes(inputEl.value.trim());  
     }
     inputEl.value = '';
 }

@@ -14,7 +14,7 @@ const setColor = () => {
 }
 
 setColorBtn.addEventListener("click", setColor);
-const btn = document.querySelector(".change-color");
+//const btn = document.querySelector(".change-color");
 btn.style.background = "#4E75FF";
 btn.style.fontWeight = "500";
 btn.style.fontSize = "16px";
